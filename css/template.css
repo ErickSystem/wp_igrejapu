@@ -12,3 +12,32 @@ h2{ font-size: 24px; margin-top: 0; }
 h3{ font-size: 20px; margin-top: 0; }
 h4{ font-size: 18px; margin-top: 0; }
 
+/* Header - Main Menu */
+.igrejapu-header{ margin-bottom: 0;}
+.igrejapu-header-middle, .igrejapu-header, .row {position: relative;}
+.menu-area{ background: #ffffff; padding: 5px 0; }
+.igrejapu-header-middle{ height: 100px; }
+/*.igrejapu-slot-l{ height: 50%; }*/
+.main-menu{font-size: 16px;}
+.main-menu ul{ list-style: none; padding: 0; margin: 0; }
+.main-menu ul li{ display: inline;  margin: 0 50px 0 0; font-size: 18px; font-weight: bold;}
+.main-menu ul li:last-child{ margin: 0; }
+.main-menu ul li a{ text-transform: capitalize; color: #3b0808; text-decoration: none;}
+.main-menu ul  li.current-menu-item a{ color:#b3483e; }
+.igrejapu-action{text-align: center; padding: 0; margin: 0}
+.igrejapu-action li{ position: relative; vertical-align: middle; display: inline; text-decoration: none;}
+
+/* Align */
+.align{ display: flex; align-items: center; width: 100%; }
+
+/* Slider */
+.recent-post-slider.design-2 .post-image-bg{ min-height: 700px; }
+.recent-post-slider.design-2 .post-content-left{ display: flex; align-items: center; }
+.recent-post-slider .slick-dots li button { border: 0 !important; border-radius: 0 !important; width: 29px !important; height: 8px !important;
+}.recent-post-slider .slick-dots li.slick-active button { background: #3b0808 !important;}
+
+/* Footer */
+.igrejapu-footer{font-size: 12px; line-height: 20px; clear: both;}
+.igrejapu-footer{background: #111111; color: #ffffff;}
+.igrejapu-copyright{position: relative;font-size: 12px;padding: 35px 0;opacity: .8;}
+.igrejapu-copyright p{margin-bottom: 0;}
