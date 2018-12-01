@@ -1,0 +1,14 @@
+/************** FONTS *****************/
+
+@import url('https://fonts.googleapis.com/css?family=Ledger:400,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+
+/************** GENERAL *****************/
+
+body{ font: 16px/1.6 'Ledger', sans-serif;  }
+body p{ font: 16px/1.6 'Lato', sans-serif; }
+h1{ font-size: 28px; margin: 15px 0 15px; }
+h2{ font-size: 24px; margin-top: 0; }
+h3{ font-size: 20px; margin-top: 0; }
+h4{ font-size: 18px; margin-top: 0; }
+
