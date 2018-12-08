@@ -14,34 +14,26 @@
                             while( have_posts() ): the_post();
 
                         ?>
+                            <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
-                        <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-
-                        <?php 
-                            endwhile;
-
-                            ?>
+                            <?php endwhile; 
+                            
+                            $args = array(
+                                'previous_string' => __( 'Anterior', 'wpigrejapu'),
+                                'next_string' => __( 'Próximo', 'wpigrejapu')
+                            );
+                            // Pagination                            
+                            if ( function_exists('wp_bootstrap_pagination') ){
+                                 wp_bootstrap_pagination($args);
+                            }
                                 
-                            <div class="row">
-                                <div class="pages text-left col-6">
-                                    <?php previous_posts_link( __( "<<Postagens Nova", 'wpigrejapu' ) ); ?>
-                                </div>
-                                <div class="pages text-right col-6">
-                                        <?php next_posts_link( __( "Postagens Antiga>>", 'wpigrejapu' ) ); ?>
-                                </div>
-                            </div>
+                            ?>
 
-
-                            <?php
-                        else:
-                        ?>
-
+                        <?php else: ?>
                             <p><?php _e( 'Ainda não há nada para ser exibido...', 'wpigrejapu' ); ?></p>
-
                         <?php endif; ?>
 
                     </div>
-                    <?php get_sidebar( 'blog' ); ?>						
                 </div>
             </div>				
         </section>

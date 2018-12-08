@@ -193,7 +193,7 @@ function wpigrejapu_customizer( $wp_customize ){
 	);
 
 	$wp_customize->add_setting(
-		'set_loop2_posts_per_page', array(
+		'set_posts_per_page', array(
 			'type' => 'theme_mod',
 			'default' => '2',
 			'sanitize_callback' => 'absint'
@@ -201,50 +201,13 @@ function wpigrejapu_customizer( $wp_customize ){
 	);
 
 	$wp_customize->add_control(
-		'set_loop2_posts_per_page', array(
-			'label' => __('Número de postagens para exibir no segundo loop', 'wpigrejapu'),
-			'description' => __('Escolha o número de postagens para exibir no segundo loop', 'wpigrejapu'),
+		'set_posts_per_page', array(
+			'label' => __('Número de postagens para exibir', 'wpigrejapu'),
+			'description' => __('Escolha o número de postagens para exibir no loop', 'wpigrejapu'),
 			'section' => 'sec_loops',
 			'type' => 'number'
 		)
 	);
-
-
-	$wp_customize->add_setting(
-		'set_loop2_categories_to_exclude', array(
-			'type' => 'theme_mod',
-			'default' => '',
-			'sanitize_callback' => 'wp_filter_nohtml_kses'
-		)
-	);
-
-	$wp_customize->add_control(
-		'set_loop2_categories_to_exclude', array(
-			'label' => __('Categorias para excluir no segundo loop', 'wpigrejapu'),
-			'description' => __('Escolha as categorias para excluir no segundo loop. Use vírgulas para separar as categorias. Por exemplo 4,5,8,20', 'wpigrejapu'),
-			'section' => 'sec_loops',
-			'type' => 'text'
-		)
-	);
-
-
-	$wp_customize->add_setting(
-		'set_loop2_categories_to_include', array(
-			'type' => 'theme_mod',
-			'default' => '',
-			'sanitize_callback' => 'wp_filter_nohtml_kses'
-		)
-	);
-
-	$wp_customize->add_control(
-		'set_loop2_categories_to_include', array(
-			'label' => __('Categorias para incluir no segundo loop', 'wpigrejapu'),
-			'description' => __('Escolha as categorias para excluir no segundo loop. Use vírgulas para separar as categorias. Por exemplo 4,5,8,20', 'wpigrejapu'),
-			'section' => 'sec_loops',
-			'type' => 'text'
-		)
-	);
-
 }
 add_action( 'customize_register', 'wpigrejapu_customizer' );
 

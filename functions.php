@@ -3,6 +3,7 @@
 // Incluindo os arquivos da TGM
 require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 require_once get_template_directory() . '/inc/required-plugins.php';
+require_once get_template_directory() . '/inc/wp_bootstrap_pagination.php';
 
 // Requerendo o arquivo do Customizer
 require get_template_directory() . '/inc/customizer.php';
@@ -15,6 +16,8 @@ function load_scripts_web(){
 }
 function load_scripts_local(){
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '4.0.0', true );
+	wp_enqueue_script( 'jquery-3.3.1', get_template_directory_uri() . '/js/jquery-3.3.1.js', array(), '3.3.1', true );
+	wp_enqueue_script( 'janela', get_template_directory_uri() . '/js/janela.js', array( 'jquery' ), '1.0.0', true );
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '4.0.0', 'all' );
 	wp_enqueue_style( 'template', get_template_directory_uri() . '/css/template.css', array(), '1.0', 'all' );
 }
@@ -49,3 +52,29 @@ function wp_igrejapu_config(){
 
 }
 add_action( 'after_setup_theme', 'wp_igrejapu_config', 0 );
+
+// Registrando Sidebars
+add_action( 'widgets_init', 'wpigrejapu_sidebars' );
+function wpigrejapu_sidebars(){
+	register_sidebar(
+		array(
+			'name' => __( 'Home Page Barra Lateral', 'wpigrejapu' ),
+			'id' => 'gallery-1',
+			'description' => __( 'Galeria de fotos Home pagina', 'wpigrejapu'),
+			'before_widget' => '<li id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</li>',
+			'before_title'  => '<h2 class="widgettitle">',
+			'after_title'   => '</h2>',
+		)
+	);
+}
+
+/* Function to do paginator */
+function customize_wp_bootstrap_pagination($args) {
+    
+    $args['previous_string'] = 'previous';
+    $args['next_string'] = 'next';
+    
+    return $args;
+}
+add_filter('wp_bootstrap_pagination_defaults', 'customize_wp_bootstrap_pagination');
