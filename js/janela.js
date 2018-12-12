@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 		$('#mascara').css({'width':larguraTela, 'height':alturaTela});
 		$('#mascara').fadeIn(1000);
-		$('#mascara').fadeTo("slow", 0.8);
+		$('#mascara').fadeTo("slow", 0.9);
 
 		var left = ($(window).width() / 2 ) - ($(id).width() / 2 );
 		var top  = ($(window).height() / 2 ) - ($(id).height() / 2 );

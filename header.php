@@ -12,9 +12,8 @@
 				<div class="row igrejapu-header-middle">
 					<div class="align">
 						
-						<div class="igrejapu-slot-l col-md-2 col-12 text-left">
+						<div class="igrejapu-slot-l col-md-2 col-12 text-left hidden-xl-up">
 							<section class="logo">
-								<h2>Logo</h2>
 								<?php the_custom_logo(); ?>
 							</section>
 						</div>
@@ -49,11 +48,11 @@
 	<!-- Chamada do Modal de busca -->
 	<div class="window" id="janela">
 		<div class="col-md-12 col-12 text-right">
-			<a href="#" class="fechar">
-				<img clas="img-fluid" src="<?php echo get_template_directory_uri() . '/images/cancel_96245.svg'; ?>" alt="img-sair">
+			<a href="#" class="fechar" alt="sair">
+				<i class="material-icons">close</i>
 			</a>
 		</div>
-		<div class="col-md-12 col-12 text-left">
+		<div class="form-wpsearch col-md-12 col-12">
 			<?php get_search_form(); ?>
 		</div>
 

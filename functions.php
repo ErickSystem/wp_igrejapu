@@ -43,7 +43,10 @@ function wp_igrejapu_config(){
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'post-formats', array( 'video', 'image' ) );
 	add_theme_support( 'title-tag');
-	add_theme_support( 'custom-logo', array( 'height' => 110, 'width' => 200 ) );
+	// Logo 
+	// add_theme_support( 'custom-logo', array( 'height' => 130, 'width' => 200 ) );
+	//Logo 2
+	add_theme_support( 'custom-logo', array( 'height' => 150, 'width' => 420 ) );
 
 	// Habilitando suporte à tradução
 	$textdomain = 'wpigrejapu';
@@ -52,6 +55,15 @@ function wp_igrejapu_config(){
 
 }
 add_action( 'after_setup_theme', 'wp_igrejapu_config', 0 );
+
+/* Customizando logo */
+add_filter( 'wp_get_attachment_image_attributes', function( $attr )
+{
+    if( isset( $attr['class'] )  && 'custom-logo' === $attr['class'] )
+        $attr['class'] = 'custom-logo img-fluid';
+
+    return $attr;
+} );
 
 // Registrando Sidebars
 add_action( 'widgets_init', 'wpigrejapu_sidebars' );

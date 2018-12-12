@@ -2,6 +2,35 @@
 
 @import url('https://fonts.googleapis.com/css?family=Ledger:400,900');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/**** ICONS *********/
+.material-icons {
+font-family: 'Material Icons';
+font-weight: normal;
+font-style: normal;
+font-size: 35px;  /* Preferred icon size */
+display: inline-block;
+line-height: 1;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+direction: ltr;
+}
+
+
+/* Support for all WebKit browsers. */
+-webkit-font-smoothing: antialiased;
+/* Support for Safari and Chrome. */
+text-rendering: optimizeLegibility;
+
+/* Support for Firefox. */
+-moz-osx-font-smoothing: grayscale;
+
+/* Support for IE. */
+font-feature-settings: 'liga';
+}
 
 /************** GENERAL *****************/
 
@@ -13,17 +42,23 @@ h3{ font-size: 20px; margin-top: 0; }
 h4{ font-size: 18px; margin-top: 0; }
 
 /* Header - Main Menu */
-.igrejapu-header{ margin-bottom: 0;}
+.igrejapu-header{ margin-bottom: 0px; margin-top: 0px;}
 .igrejapu-header-middle, .igrejapu-header, .row {position: relative;}
-.menu-area{ background: #ffffff; padding: 5px 0; }
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (min-width: 767px) {
+    .igrejapu-slot-l .logo {
+        width: 220%;
+    }
+  }
+.menu-area{ background: #ffffff; padding: 5px 0; margin-bottom: 10px; margin-top: 10px;}
 .igrejapu-header-middle{ height: 100px; }
 /*.igrejapu-slot-l{ height: 50%; }*/
 .main-menu{font-size: 16px;}
 .main-menu ul{ list-style: none; padding: 0; margin: 0; }
 .main-menu ul li{ display: inline;  margin: 0 50px 0 0; font-size: 18px; font-weight: bold;}
 .main-menu ul li:last-child{ margin: 0; }
-.main-menu ul li a{ text-transform: capitalize; color: #3b0808; text-decoration: none;}
-.main-menu ul  li.current-menu-item a{ color:#b3483e; }
+.main-menu ul li a{ text-transform: capitalize; color: #591405; text-decoration: none;}
+.main-menu ul  li.current-menu-item a{ color:#d4d645; }
 .igrejapu-action{text-align: center; padding: 0; margin: 0}
 .igrejapu-action li{ position: relative; vertical-align: middle; display: inline; text-decoration: none;}
 
@@ -34,7 +69,7 @@ h4{ font-size: 18px; margin-top: 0; }
 .recent-post-slider.design-2 .post-image-bg{ min-height: 700px; }
 .recent-post-slider.design-2 .post-content-left{ display: flex; align-items: center; }
 .recent-post-slider .slick-dots li button { border: 0 !important; border-radius: 0 !important; width: 29px !important; height: 8px !important;
-}.recent-post-slider .slick-dots li.slick-active button { background: #3b0808 !important;}
+}.recent-post-slider .slick-dots li.slick-active button { background: #591405 !important;}
 
 /* Footer */
 .igrejapu-footer{font-size: 12px; line-height: 20px; clear: both;}
@@ -47,10 +82,10 @@ h4{ font-size: 18px; margin-top: 0; }
 .pager{margin: 0; padding: 0; height: 100%; width: 100%;}
 .pager li{ height: 50px; width: 85px; display: inline-block; vertical-align: top; border-radius: 5px; line-height: 50px;}
 .pager .active{background-color: rgba(94,94,94,0.1); font-size: 16px;}
-.pager .previous{color: #FFF; background-color: #009cff; margin-left: 10px;}
-.pager .next{color: #FFF; background-color: #009cff; margin-left: 10px;}
-.pager .first{color: #FFF; background-color: #3b0808; margin-left: 10px;}
-.pager .latest{color: #FFF; background-color: #3b0808; margin-left: 10px;}
+.pager .previous{color: #FFF; background-color: #d4d645; margin-left: 10px;}
+.pager .next{color: #FFF; background-color: #d4d645; margin-left: 10px;}
+.pager .first{color: #FFF; background-color: #591405; margin-left: 10px;}
+.pager .latest{color: #FFF; background-color: #591405; margin-left: 10px;}
 
 .pager a{color: #FFF; text-decoration: none; transition: all 400ms linear; font-size: 16px; font-weight: bold;}
 .pager .page-number{color: rgb(31, 30, 30);}
@@ -66,5 +101,75 @@ h4{ font-size: 18px; margin-top: 0; }
 
 /* Header - Modal Search */
 .window{display: none;width: 600px;height: 200px;position: absolute;left: 0;top:0;z-index: 9900;padding: 10px;border-radius: 10px;}
-#mascara{display: none;position: absolute;background: #000 ;left: 0;top:0;z-index: 9000;}
-.search-form{padding: 0;}
+.window a{color: #FFF}
+.window a:hover{color: rgb(214, 212, 212);}
+#mascara{display: none;position: absolute;background: #000 ;left: 0;top:-20px;z-index: 9000;}
+.form-wpsearch { 
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    text-align: left;
+    z-index: 1045;
+    padding: 0;
+}
+
+.search-form {
+    position: relative;
+    padding: 40px 0;
+    text-align: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 743px;
+    margin: 0 auto;
+}
+.search-form {
+    padding: 0;
+}
+.form-wpsearch .search-form input{
+    color: #FFF;
+    padding: 32px 33px;
+    font-size: 18px;
+    line-height: 1.2;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    font-weight: 500;
+}
+.search-form input{width: 99%;}
+
+.search-form button, .no-results .search-form button {
+    position: absolute;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    margin-top: 0;
+    right: 10px;
+    height: 35%;
+    top: 0;
+    z-index: 4;
+}
+.search-form button {
+    position: absolute;
+    color: #fff;
+    margin-left: -53px;
+    margin-top: 27px;
+    border: none;
+    background-color: transparent;
+    line-height: 1;
+}
+.search-form button:hover {
+    color: rgb(214, 212, 212);
+}
+.searchform .screen-reader-text {
+    font-size: 18px;
+    color: #343434;
+}
+.form-wpsearch .search-form input {
+    background-color: transparent;
+}
