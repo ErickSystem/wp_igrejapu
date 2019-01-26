@@ -3,12 +3,11 @@
 		<div id="main">
 			<div class="container">
 
-				<h2><?php _e( 'Buscar resultados para:', 'wpigrejapu' ); ?> <?php echo get_search_query(); ?></h2>
-
+				<!-- <h2><? //php _e( 'Buscar resultados para:', 'wpigrejapu' ); ?> < //?php echo get_search_query(); ?></h2> -->
+                <h2 class="h2-serach-find"> <?php _e( 'Resultado(s) encontrado(s):', 'wpigrejapu' ); ?> </h2>
 				<?php 
 
                 if( have_posts() ):
-                    get_search_form();
 
                     while( have_posts() ): the_post();
 

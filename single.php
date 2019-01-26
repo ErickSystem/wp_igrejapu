@@ -1,4 +1,17 @@
 <?php get_header(); ?>
+
+	<!-- Breadcrumb -->
+	<div class="container">
+	<div class="row">
+		<?php
+		if ( function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb( '<p id="breadcrumbs" class="mt-5 pl-3">','</p>' );
+		}
+		?>
+	</div>
+	</div>
+	<!-- Breadcrumb -->
+
 	<div id="primary">
 		<div id="main">
 			<div class="container">

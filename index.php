@@ -1,12 +1,24 @@
 <?php get_header(); ?>
 
+<!-- Breadcrumb -->
+<div class="container">
+  <div class="row">
+       <?php
+       if ( function_exists('yoast_breadcrumb') ) {
+         yoast_breadcrumb( '<p id="breadcrumbs" class="mt-5 pl-3">','</p>' );
+       }
+       ?>
+   </div>
+</div>
+<!-- Breadcrumb -->
+
 <div class="content-area">
     <main>
         <section class="middle-area">
             <div class="container">
                 <div class="row">
                     
-                    <div class="news col-md-8">
+                    <div class="news col-md-8 col-sm-12">
                         <?php 
                         // Se houver algum post
                         if( have_posts() ):
