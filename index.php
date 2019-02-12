@@ -18,7 +18,7 @@
             <div class="container">
                 <div class="row">
                     
-                    <div class="news col-md-8 col-sm-12">
+                    <div class="news col-10 col-md-8 col-sm-12">
                         <?php 
                         // Se houver algum post
                         if( have_posts() ):
@@ -27,7 +27,6 @@
 
                         ?>
                             <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-
                             <?php endwhile; 
                             
                             $args = array(

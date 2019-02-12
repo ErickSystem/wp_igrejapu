@@ -165,6 +165,24 @@ function wpigrejapu_customizer( $wp_customize ){
 			'type' => 'number'
 		)
 	);	
+	// Speed
+
+	$wp_customize->add_setting(
+		'set_slider_speed', array(
+			'type' => 'theme_mod',
+			'default' => '3000',
+			'sanitize_callback' => 'absint'
+		)
+	);
+
+	$wp_customize->add_control(
+		'set_slider_speed', array(
+			'label' => __('Velocidade de transição dos posts', 'wpigrejapu'),
+			'description' => __('Determine a velocidade que os posts vão transitar por millisegundos, exemplo: 1000 mili = 1 segundo', 'wpigrejapu'),
+			'section' => 'sec_slider',
+			'type' => 'number'
+		)
+	);
 
 	// Front Page Loops
 

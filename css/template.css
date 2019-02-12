@@ -6,65 +6,179 @@
 
 /**** ICONS *********/
 .material-icons {
-font-family: 'Material Icons';
-font-weight: normal;
-font-style: normal;
-font-size: 35px;  /* Preferred icon size */
-display: inline-block;
-line-height: 1;
-text-transform: none;
-letter-spacing: normal;
-word-wrap: normal;
-white-space: nowrap;
-direction: ltr;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 35px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
 }
 
 /************** GENERAL *****************/
 
-body{background: #f3f3f3; font: 16px/1.6 'Ledger', sans-serif;  }
+body{background: #faf6f6; font: 16px/1.6 'Ledger', sans-serif;  }
 body p{ font: 16px/1.6 'Lato', sans-serif; }
 h1{ font-size: 28px; margin: 15px 0 15px; }
 h2{ font-size: 24px; margin-top: 0; }
 h3{ font-size: 20px; margin-top: 0; }
 h4{ font-size: 18px; margin-top: 0; }
 
+/* Align */
+.align{ display: flex; align-items: center; width: 100%; }
+/* Map */
+.map iframe{ display: block; }
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 /*********** CONTENT AREA - HOME PAGE ***************/
 
-.middle-area {margin: 0;}
+.middle-area {margin: auto;}
 .content-area {margin-bottom: 30px;}
 
 /* Header - Main Menu */
-.igrejapu-header{ margin-bottom: 0px; margin-top: 0px;}
+.igrejapu-header{ margin: auto;}
 .igrejapu-header-middle, .igrejapu-header, .row {position: relative;}
-/* On screens that are 992px or less, set the background color to blue */
-@media screen and (min-width: 767px) {
-    .igrejapu-slot-l .logo {
-        width: 220%;
-    }
-  }
-.menu-area{ background: #ffffff; padding: 5px 0; margin-bottom: 10px; margin-top: 10px;}
-.igrejapu-header-middle{ height: 100px; }
+.igrejapu-slot-l .logo {width: 135%;}
+
+.menu-area{ background: #ffffff; padding: 5px 0; margin: auto;}
+.igrejapu-header-middle{ height: 85px; }
 /*.igrejapu-slot-l{ height: 50%; }*/
 .main-menu{font-size: 16px;}
 .main-menu ul{ list-style: none; padding: 0; margin: 0; }
 .main-menu ul li{ display: inline;  margin: 0 50px 0 0; font-size: 18px; font-weight: bold;}
 .main-menu ul li:last-child{ margin: 0; }
 .main-menu ul li a{ text-transform: capitalize; color: #591405; text-decoration: none;}
-.main-menu ul  li.current-menu-item a{ color:#d4d645; }
+.main-menu ul  li.current-menu-item a{ color:#ccac00; }
 .igrejapu-action{text-align: center; padding: 0; margin: 0}
 .igrejapu-action li{ position: relative; vertical-align: middle; display: inline; text-decoration: none;}
 
-/* Align */
-.align{ display: flex; align-items: center; width: 100%; }
+/* Mobile*/
+@media screen and (max-width: 767px) {
+    .igrejapu-slot-l{
+        margin: -63px 80px 10px 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .menu-area{
+        padding: 24px 0px !important;
+    }
+}
+@media screen and (max-width: 767px) {
+    .igrejapu-slot-l .logo {
+        width: 80%;
+    }
+}
+
+/****** Sections **********************/
+.popular-subtitle:after, .popular-subtitle:before {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.popular-subtitle:before {
+    border-left-color: #ccac00 !important;
+}
+.popular-subtitle:before {
+    border-color: rgba(243, 101, 187, 0);
+    border-width: 19px;
+    margin-top: -19px;
+}
+.popular-subtitle{
+    background-color: #ccac00;
+    color: #FFFFFF;
+    position: relative;
+    border: 0px;
+    font-family: 'Lato';
+    font-weight: 600;
+    float: left;
+    margin: 3px 80px 5px 0;
+    padding: 7px 15px 7px 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    z-index: 100;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+/* Members */
+.content-area .members{
+    margin-top: 50px;
+    height: 900px;
+    background-image: url("../images/membros_desfoque.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: center;
+}
 
 /* Slider */
-.recent-post-slider.design-2 .post-image-bg{ min-height: 700px; }
-.recent-post-slider.design-2 .post-content-left{ display: flex; align-items: center; }
+.recent-post-slider .recentpost-categories ul.post-categories li:nth-child(4n+1) a {background: #591405;}
+.recent-post-slider .recentpost-categories ul.post-categories li a {
+    color: #FFFFFF;
+    position: relative;
+    border: 0px;
+    font-family: 'Lato';
+    font-size: 25px;
+    font-weight: 600;
+    margin: 3px 80px 5px 0;
+    padding: 10px 100px 10px 100px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    z-index: 100;
+    display: inline-block;
+}
+.recent-post-slider h2.wp-post-title a{
+    position: relative;
+    border: 0px;
+    font-family: 'Lato';
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    z-index: 100;
+    display: inline-block;
+}
+.recent-post-slider .wp-post-date{
+    position: relative;
+    border: 0px;
+    font-family: 'Lato';
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    z-index: 100;
+    display: inline-block;
+}
+.recent-post-slider .wp-post-date::after{
+    background-color: #ccac00 !important;
+}
 .recent-post-slider .slick-dots li button { border: 0 !important; border-radius: 0 !important; width: 29px !important; height: 8px !important;
 }.recent-post-slider .slick-dots li.slick-active button { background: #591405 !important;}
 
-/* Footer */
+.recent-post-slider.design-1 .post-image-bg{ min-height: 550px; }
+
+.recent-post-slider.design-2 .post-image-bg{ min-height: 550px; }
+.recent-post-slider.design-2 .post-content-left{ display: flex; align-items: center; }
+
+.recent-post-slider.design-3 .post-image-bg{ min-height: 550px; }
+
+.recent-post-slider.design-4 .post-image-bg{ min-height: 550px; }
+
+/******************************* PAGE - FOOTER ***************************************************/
 .igrejapu-footer{font-size: 12px; line-height: 20px; clear: both;}
 .igrejapu-footer{background: #111111; color: #ffffff;}
 .igrejapu-copyright{position: relative;font-size: 12px;padding: 35px 0;opacity: .8;}
@@ -88,9 +202,6 @@ h4{ font-size: 18px; margin-top: 0; }
 .pager .next:hover{box-shadow: 5px 2px 10px rgba(0,0,0,0.5); transition: all 400ms linear;}
 .pager .first:hover{box-shadow: 5px 2px 10px  rgba(0,0,0,0.5);; background: #701e1e; transition: all 400ms linear;}
 .pager .latest:hover{box-shadow: 5px 2px 10px rgba(0,0,0,0.5);; background: #701e1e; transition: all 400ms linear;}
-
-/* Map */
-.map iframe{ display: block; }
 
 /* Header - Modal Search */
 .window{display: none;width: 600px;height: 200px;position: absolute;left: 0;top:0;z-index: 9900;padding: 10px;border-radius: 10px;}

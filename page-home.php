@@ -6,30 +6,70 @@
             <?php 
                 $design = get_theme_mod( 'set_slider_option' );
                 $limit = get_theme_mod( 'set_slider_limit' );
+                $speed = get_theme_mod( 'set_slider_speed' );
 
-                echo do_shortcode( '[recent_post_slider design="design-' . $design . '" limit=" ' . $limit  . '"]' ); 
+                echo do_shortcode( '[recent_post_slider speed="'. $speed .'" design="design-' . $design . '" limit=" ' . $limit  . '"]' ); 
             ?>               
         </section>
-        <section class="middle-area">
+        <section class="service">
             <div class="container">
-
-                <article class="popular-galary">
-                    <h1><?php _e( "Popular Galeria de Fotos", 'wpigrejapu' ); ?></h1>    
-                    <?php echo do_shortcode( '[wcp-carousel id="185"]' ); ?>
-                </article>
-                
-                <article class="popular-video">
-                    <h1><?php _e( "Popular Galeria de Vídeos", 'wpigrejapu' ); ?></h1>    
-                    <?php echo do_shortcode( '[wcp-carousel id="191"]' ); ?>
-                </article>
-
-                <article class="latest-news">
-                    <h1><?php _e( "Últimos Artigos", 'wpigrejapu' ); ?></h1>    
-                    <?php echo do_shortcode( '[wcp-carousel id="223"]' ); ?>
-                </article>
-                
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <h3 class="popular-subtitle"><?php _e( "Galeria de Fotos", 'wpigrejapu' ); ?></h1>    
+                    </div>
+                </div>
+                <div class="row">
+                     <div class="col-md-12 col-sm-12">
+                        <?php echo do_shortcode( '[wcp-carousel id="185"]' ); ?> 
+                    <div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <h3 class="popular-subtitle"><?php _e( "Galeria de Vídeos", 'wpigrejapu' ); ?></h1>    
+                    </div>
+                </div>
+                <div class="row">
+                     <div class="col-md-12 col-sm-12">
+                        <?php echo do_shortcode( '[wcp-carousel id="191"]' ); ?>  
+                    <div>
+                </div>
             </div>				
         </section>
+        <section class="members">
+            <div class="container">
+                <h1>Obras Realizadas</h1>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="services-item">
+                            <?php 
+                                if ( is_active_sidebar( 'services-1' ) ){
+                                    dynamic_sidebar( 'services-1' );
+                                } 
+                            ?>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="services-item">
+                            <?php 
+                                if ( is_active_sidebar( 'services-2' ) ){
+                                    dynamic_sidebar( 'services-2' );
+                                } 
+                            ?>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="services-item">
+                            <?php 
+                                if ( is_active_sidebar( 'services-3' ) ){
+                                    dynamic_sidebar( 'services-3' );
+                                } 
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>		
+        </section>
+
         <section class="map">
             <?php 
                //$key = get_theme_mod( 'set_map_apikey' );

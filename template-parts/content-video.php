@@ -1,10 +1,8 @@
-<article <?php post_class(); ?>>
-	<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array( 275, 275 ) ); ?></a>
-	<div class="meta-info">
-		<p><?php _e( 'Published in', 'wpcurso' ); ?> <?php echo get_the_date(); ?> <?php _e( 'by', 'wpcurso' ); ?> <?php the_author_posts_link(); ?></p>
-		<p><?php _e( 'Categories:', 'wpcurso' ); ?> <?php the_category( ' ' ); ?></p>
-		<p><?php the_tags( __( 'Tags: ', 'wpcurso' ), ', ' ); ?></p>
-	</div>
-	<?php the_content(); ?>
-</article>
+<div class="card" style="width: 18rem;">
+<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium', array( 'class' => 'img-fluid rounded-right border border-dark' ) ); ?></a>
+  <div class="card-body">
+  	<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+	  <?php the_excerpt(); ?>
+    <a href="<?php the_permalink(); ?>" class="btn btn-primary">Ler Mais</a>
+  </div>
+</div>
