@@ -1,0 +1,22 @@
+/* ################# HEADER ############### */
+
+/* -----------
+    Mobile
+-------------*/
+@media screen and (max-width: 767px) {
+    .igrejapu-slot-l{
+        margin: 0px 80px 10px 48px;
+    }
+    .igrejapu-slot-l .logo {
+        width: 100%;
+    }
+    .menu-area{
+        padding: 24px 0px !important;
+    }
+    .igrejapu-slot-r{
+        display: none;
+    }
+    .igrejapu-search{
+        display: none;
+    }
+}

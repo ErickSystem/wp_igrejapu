@@ -6,13 +6,14 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <header class="igrejapu-header">
+
+	<header class="igrejapu-header">
 		<section class="menu-area">
 			<div class="container">
 				<div class="row igrejapu-header-middle">
 					<div class="align">
 						
-						<div class="igrejapu-slot-l col-md-2 col-12 text-left hidden-xl-up">
+						<div class="igrejapu-slot-l col-md-4 col-sm-4 col-12">
 							<section class="logo">
 								<?php the_custom_logo(); ?>
 							</section>
@@ -29,8 +30,8 @@
 							</nav>	
 						</div>
 
-						<div class="col-sm-2 ">
-							<ul class="igrejapu-action col-4">
+						<div class="igrejapu-search col-sm-3">
+							<ul>
 								<li>
 									<span>
 										<a href="#janela" rel="Modal"><img src="<?php echo get_template_directory_uri() . '/images/google-web-search.png'; ?>" class="img-fluid"></a>

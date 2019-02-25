@@ -6,14 +6,12 @@
 $(document).ready(function(){
 
 	$("a[rel=modal]").click(function(ev){
-
 		ev.preventDefault();
-
 		var id = $(this).attr("href");
-
 		var alturaTela  = $(document).height();
 		var larguraTela = $(window).width();
 
+		$(".search-field").val("")
 		$('#mascara').css({'width':larguraTela, 'height':alturaTela});
 		$('#mascara').fadeIn(1000);
 		$('#mascara').fadeTo("slow", 0.9);
@@ -23,21 +21,22 @@ $(document).ready(function(){
 
 		$(id).css({'left':left, 'top':top});
 		$(id).show();
+		$("body").css("overflow", "hidden");
 	});
 
 	$('#mascara').click(function(){
 
 		$(this).fadeOut("slow");
 		$('.window').fadeOut("slow");
+		$("body").css("overflow", "visible");
+		
 	});
 
 	$('.fechar').click(function(ev){
-
 		ev.preventDefault();
-
 		$('#mascara').fadeOut(1000, "linear");
 		$('.window').fadeOut(1000, "linear");
-
+		$("body").css("overflow", "visible");
 	});
 
 });

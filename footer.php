@@ -3,9 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-8 col-sm-12">
-            <section class="logo">
-                <?php the_custom_logo(); ?>
-            </section>
+                LAYOUT 1
             </div>
             <div class="col-lg-4 col-md-8 col-sm-12">
                 LAYOUT 1

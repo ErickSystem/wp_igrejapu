@@ -1,37 +1,59 @@
 <?php get_header(); ?>
-	<div id="primary">
-		<div id="main">
-			<div class="container">
 
-				<!-- <h2><? //php _e( 'Buscar resultados para:', 'wpigrejapu' ); ?> < //?php echo get_search_query(); ?></h2> -->
-                <h2 class="h2-serach-find"> <?php _e( 'Resultado(s) encontrado(s):', 'wpigrejapu' ); ?> </h2>
-				<?php 
+<!-- Breadcrumb -->
+<div class="container">
+  <div class="row">
+       <?php
+       if ( function_exists('yoast_breadcrumb') ) {
+         yoast_breadcrumb( '<p id="breadcrumbs" class="mt-5 pl-3">','</p>' );
+       }
+       ?>
+   </div>
+</div>
+<!-- Breadcrumb -->
 
-                if( have_posts() ):
+<div class="content-area">
+    <main>
+        <section class="middle-area">
+            <div class="container">
+                <div class="result-search">
+                    <h2><?php _e( 'Resultado da pesquisa por:', 'wpcurso' ); ?> <?php echo get_search_query(); ?></h2>
+                </div>
+                <div class="row">
+                    <div class="news col-10 col-md-8 col-sm-12">
+                        
+                        <?php 
+                        // Se houver algum post
+                        if( have_posts() ):
+                            // Enquanto houver posts, mostre-os pra gente
+                            while( have_posts() ): the_post();
+                                 get_template_part( 'template-parts/content', 'search' ); 
+                            endwhile
+                        ?>          
+                        <?php else: ?>
+                            <h3><?php _e( 'Nenhuma resultado foi encontrada para esta pesquisa', 'wpigrejapu' ); ?></h3>
+                        <?php endif; ?>
 
-                    while( have_posts() ): the_post();
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="paginator col-md-12">
+                        <?php
+                            $args = array(
+                                'previous_string' => __( 'Anterior', 'wpigrejapu'),
+                                'next_string' => __( 'Próximo', 'wpigrejapu')
+                            );
+                            // Pagination                            
+                            if ( function_exists('wp_bootstrap_pagination') ){
+                                wp_bootstrap_pagination($args);
+                            }
+                        ?>
+                    </div>
+                </div>
+   
+            </div><!-- container-->		
+        </section>
+    </main>
+</div>
 
-                        get_template_part( 'template-parts/content', 'search' );
-
-                        if( comments_open() || get_comments_number() ) :
-                            comments_template();
-                        endif;
-
-                    endwhile;
-
-                    $args = array(
-                        'previous_string' => __( 'Anterior', 'wpigrejapu'),
-                        'next_string' => __( 'Próximo', 'wpigrejapu')
-                    );
-                    // Pagination                            
-                    if ( function_exists('wp_bootstrap_pagination') ){
-                        wp_bootstrap_pagination($args);
-                    }
-				?>
-                <?php else: ?>
-                    <h4><?php _e( 'Ops, não foi encontrado nenhum post para sua pesquisa...', 'wpigrejapu' ); ?></h4>
-                <?php endif; ?>
-			</div>
-		</div>
-	</div>
 <?php get_footer(); ?>
