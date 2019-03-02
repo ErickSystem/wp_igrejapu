@@ -15,22 +15,23 @@
 <div class="content-area">
     <main>
         <section class="middle-area">
-            <div class="news container">
-
+            <div class="container">
+                <div class="result-search">
+                    <h2><?php _e( 'Resultado da pesquisa por:', 'wpcurso' ); ?> <?php echo get_search_query(); ?></h2>
+                </div>
                 <div class="row">
-                    <div class="news-cards col-10 col-md-8 col-sm-12">
+                    <div class="news col-10 col-md-8 col-sm-12">
+                        
                         <?php 
                         // Se houver algum post
                         if( have_posts() ):
                             // Enquanto houver posts, mostre-os pra gente
                             while( have_posts() ): the_post();
-
-                        ?>
-                            <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-                            <?php endwhile; ?>
-
+                                 get_template_part( 'template-parts/content', 'search' ); 
+                            endwhile
+                        ?>          
                         <?php else: ?>
-                            <p><?php _e( 'Ainda não há nada para ser exibido...', 'wpigrejapu' ); ?></p>
+                            <h3><?php _e( 'Nenhuma resultado foi encontrada para esta pesquisa', 'wpigrejapu' ); ?></h3>
                         <?php endif; ?>
 
                     </div>
