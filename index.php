@@ -15,10 +15,10 @@
 <div class="content-area">
     <main>
         <section class="middle-area">
-            <div class="container">
+            <div class="news container">
 
                 <div class="row">
-                    <div class="news col-10 col-md-8 col-sm-12">
+                    <div class="news-cards col-10 col-md-8 col-sm-12">
                         <?php 
                         // Se houver algum post
                         if( have_posts() ):

@@ -12,18 +12,21 @@
 	</div>
 	<!-- Breadcrumb -->
 
-	<div class="single-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<?php 
-						while( have_posts() ): the_post();
-							get_template_part( 'template-parts/content', 'single' );
-						endwhile;
-					?>
-				</div>
-			</div><!--row-->
-		</div><!-- container -->
+	<div class="cover-area cover-single">
+		<div class="cover-item">
+			<div class="cover-item-bg">
+				<span class="cover-img">
+					<?php the_post_thumbnail( 'full', array( 'class' => 'img-fluid' ) ); ?>
+				</span>
+			</div>
+		</div>
 	</div><!-- single-area-->
+	<div class="single-content-site container">
+		<?php 
+			while( have_posts() ): the_post();
+				get_template_part( 'template-parts/content', 'single' );
+			endwhile;
+		?>
+	</div><!--single-content-site-->
 
 <?php get_footer(); ?>
