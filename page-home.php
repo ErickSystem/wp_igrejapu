@@ -39,7 +39,27 @@
             <br><br>			
         </section><!-- fim popular-posts -->
         <!-- members -->
-        <section class="members"></section> <!-- fim members -->
+        <section class="members">
+
+            <div class="container">
+                <div class="row">
+                    <div class="members-text col-md-12">
+                        <h2>
+                            <?php _e( 'Igreja', 'wpigrejapu' );?>
+                            <br>
+                            <?php _e( 'Plenitude da Unção', 'wpigrejapu' );?>
+                            <br> 
+                            <?php _e( 'unidos aguardando', 'wpigrejapu' );?>
+                            <br> 
+                            <?php _e( 'o retorno do noivo,', 'wpigrejapu' );?>
+                            <br>
+                            <?php _e( 'Jesus Cristo!', 'wpigrejapu' );?>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+        </section> <!-- fim members -->
         <!--Services Section-->
         <section class="services-area fix" id="services">
             <div class="services-hedding">

@@ -88,6 +88,7 @@ function customize_wp_bootstrap_pagination($args) {
 }
 add_filter('wp_bootstrap_pagination_defaults', 'customize_wp_bootstrap_pagination');
 
+# restringindo o tamanho do resumo de texto a ser exibido
 function wpdocs_custom_excerpt_length( $length ) {
     return 20;
 }

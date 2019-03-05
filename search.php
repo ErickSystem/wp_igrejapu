@@ -17,7 +17,7 @@
         <section class="middle-area">
             <div class="container">
                 <div class="result-search">
-                    <h2><?php _e( 'Resultado da pesquisa por:', 'wpcurso' ); ?> <?php echo get_search_query(); ?></h2>
+                    <h2><?php _e( 'Resultado da pesquisa por:', 'wpigrejapu' ); ?> <?php echo get_search_query(); ?></h2>
                 </div>
                 <div class="row">
                     <div class="news col-10 col-md-8 col-sm-12">

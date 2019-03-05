@@ -1,9 +1,8 @@
 /* ############# FONTS ############# */
-
 @import url('https://fonts.googleapis.com/css?family=Ledger:400,900');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,900');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-
+@font-face {font-family: 'Vivaldi Italic';font-style: normal;font-weight: normal;src: local('Vivaldi Italic'), url('../fonts/VIVALDII.woff') format('woff');}
 /* ##### ICONS ####### */
 .material-icons {font-family: 'Material Icons';font-weight: normal;font-style: normal;font-size: 35px;  /* Preferred icon size */display: inline-block;line-height: 1;text-transform: none;letter-spacing: normal;word-wrap: normal;white-space: nowrap;direction: ltr;}
 /* ############### GENERAL ################# */
@@ -77,6 +76,15 @@ h4{ font-size: 18px; margin-top: 0; }
     scetion Members 
 -------------------*/
 .content-area .members{margin-top: 50px; height: 900px;background-image: url("../images/membros_desfoque.jpg");background-repeat: no-repeat;background-size: auto;background-attachment: fixed;background-position: center;}
+.members .members-text{position: relative; margin-top: 23%;}
+.members .members-text h2{
+    color: #ccac00;
+    font-family: 'Vivaldi Italic', serif;
+    font-size: 4.0em;
+    text-shadow: 4px 4px 4px rgb(22, 22, 22);
+    font-weight: 600;
+    text-align: center;
+}
 /*--------------------
     6 Services Area               
 --------------------*/
@@ -192,7 +200,28 @@ h4{ font-size: 18px; margin-top: 0; }
     width: 40%;
 }
 .cover-img{display: inline-block;}
-
+.span-next-link a{ 
+    color: #111111;
+    text-decoration: none;
+    font-size: 15px;
+}
+.span-prev-link a{
+    color: #111111;
+    text-decoration: none;
+    font-size: 15px;
+}
+.span-next-link a:hover{color: #ccac00;}
+.span-prev-link a:hover{color: #ccac00;}
+.pu-preview-next-nav{display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.pu-author{border-color: rgba(94,94,94,0.1);}
+.pu-author{margin-bottom: 35px;}
+.pu-author, .pu-preview-next-nav{border-top: 1px solid rgba(0,0,0,.1);padding-top: 35px;}
 /* ################# HEADER ############### */
 
 /* -----------
